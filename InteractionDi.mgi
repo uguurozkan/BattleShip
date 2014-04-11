@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="battleField_Package.Cell" x="226" y="704">
+        <Association destinationClassName="ship_Package.Ship"
+            endpointName="occupyingShip" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player" kind="Simple"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.LoadButtonHandler"
+        x="1137" y="585"/>
+    <CommunicationClass name="ship_Package.Ship" x="462" y="824"/>
+    <CommunicationClass name="ship_Package.AircraftCarrier" x="535" y="886">
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Deployment" x="731" y="120">
+        <Extension destinationClassName="decoration_Package.DisplayListener"/>
+        <Association destinationClassName="battleField_Package.Cell"
+            endpointName="cells" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gwindow" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="humanPlayer" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Player"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+        <Communication destinationClassName="decoration_Package.Display"/>
+        <Communication destinationClassName="battleField_Package.Grid"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Player" x="472" y="17">
+        <Association destinationClassName="battleField_Package.Grid"
+            endpointName="grid" kind="Simple"/>
+        <Association destinationClassName="ship_Package.Ship"
+            endpointName="ships" kind="Simple"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.AutoTargetHandler"
+        x="44" y="467">
+        <Association destinationClassName="decoration_Package.Attack"
+            endpointName="attackHandler" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Attack"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Display.buttonHandler"
+        x="629" y="756">
+        <Communication destinationClassName="decoration_Package.Display"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.FadeAway" x="1280" y="304">
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gw" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.MusicPlayer" x="1017" y="167"/>
+    <CommunicationClass name="bsGame_v6.BattleShipGame" x="1122" y="441"/>
+    <CommunicationClass name="decoration_Package.Images" x="769" y="627"/>
+    <CommunicationClass name="decoration_Package.DisplayListener"
+        x="792" y="729"/>
+    <CommunicationClass
+        name="decoration_Package.WelcomeScreen.RadioButtonHandler"
+        x="942" y="84">
+        <Communication destinationClassName="decoration_Package.MusicPlayer"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Fader" x="1215" y="305">
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gw" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.GameWindow" x="947" y="399">
+        <Association destinationClassName="decoration_Package.Attack"
+            endpointName="attackHandler" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Display"
+            endpointName="humanDisplay" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Display"
+            endpointName="playersDisplays" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Game"
+            endpointName="game" kind="Simple"/>
+        <Association destinationClassName="bsGame_v6.BattleShipGame"
+            endpointName="bsGame" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.Deployment"
+            endpointName="deploymentHandler" kind="Simple"/>
+        <Communication destinationClassName="bsGame_v6.BattleShipGame"/>
+        <Communication destinationClassName="decoration_Package.Display"/>
+        <Communication destinationClassName="decoration_Package.Game"/>
+        <Communication destinationClassName="decoration_Package.Attack"/>
+        <Communication destinationClassName="decoration_Package.MusicPlayer"/>
+        <Communication destinationClassName="decoration_Package.Deployment"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Display" x="677" y="627">
+        <Extension destinationClassName="decoration_Package.DisplayListener"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Display"
+            endpointName="display" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.DisplayListener"
+            endpointName="displayListener" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gWindow" kind="Simple"/>
+        <Communication destinationClassName="battleField_Package.Cell"/>
+        <Communication destinationClassName="decoration_Package.Player"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+        <Communication destinationClassName="decoration_Package.DisplayListener"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+        <Communication destinationClassName="battleField_Package.Grid"/>
+    </CommunicationClass>
+    <CommunicationClass name="battleField_Package.Grid" x="339" y="574">
+        <Association destinationClassName="battleField_Package.Cell"
+            endpointName="forShip" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player" kind="Simple"/>
+        <Communication destinationClassName="battleField_Package.Cell"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Attack" x="168" y="371">
+        <Extension destinationClassName="decoration_Package.DisplayListener"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gWindow" kind="Simple"/>
+        <Communication destinationClassName="battleField_Package.Cell"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+        <Communication destinationClassName="decoration_Package.Display"/>
+        <Communication destinationClassName="decoration_Package.Game"/>
+        <Communication destinationClassName="battleField_Package.Grid"/>
+        <Communication destinationClassName="decoration_Package.Deployment"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.SaveButtonHandler"
+        x="1000" y="586"/>
+    <CommunicationClass name="ship_Package.Destroyer" x="359" y="885">
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.LabelHandlerr" x="811" y="-2"/>
+    <CommunicationClass name="ship_Package.Submarine" x="267" y="884">
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.WelcomeScreen" x="1155" y="135">
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayer" kind="Simple"/>
+        <Association destinationClassName="bsGame_v6.BattleShipGame"
+            endpointName="bsGame" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.MusicPlayer"/>
+    </CommunicationClass>
+    <CommunicationClass name="ship_Package.Battleship" x="445" y="886">
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="ship_Package.PatrolBoat" x="643" y="887">
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.RotateShipHandler"
+        x="674" y="-4">
+        <Association
+            destinationClassName="decoration_Package.Deployment"
+            endpointName="deploymentHanlder" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Deployment"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Musics" x="938" y="168">
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicShot" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayerGameVictory" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicC" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicB" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayerGameDefeated" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicA" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayerOnDeployment" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.StarterWindow" x="1077" y="542">
+        <Association destinationClassName="bsGame_v6.BattleShipGame"
+            endpointName="bsGame" kind="Simple"/>
+        <Communication destinationClassName="bsGame_v6.BattleShipGame"/>
+    </CommunicationClass>
+    <CommunicationClass name="decoration_Package.Game" x="340" y="173">
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player1" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Player"/>
+    </CommunicationClass>
+</ClassDiagram>

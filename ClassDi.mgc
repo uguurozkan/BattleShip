@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="battleField_Package.Cell" x="531" y="618">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="ship_Package.Ship"
+            endpointName="occupyingShip" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player" kind="Simple"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.LoadButtonHandler" x="222" y="632">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ship_Package.Ship" x="866" y="773">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ship_Package.AircraftCarrier" x="775" y="909">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.Deployment" x="1066" y="76">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="decoration_Package.DisplayListener"/>
+        <Association destinationClassName="battleField_Package.Cell"
+            endpointName="cells" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gwindow" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="humanPlayer" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Player"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+        <Communication destinationClassName="decoration_Package.Display"/>
+        <Communication destinationClassName="battleField_Package.Grid"/>
+    </Class>
+    <Class name="decoration_Package.Player" x="625" y="45">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="battleField_Package.Grid"
+            endpointName="grid" kind="Simple"/>
+        <Association destinationClassName="ship_Package.Ship"
+            endpointName="ships" kind="Simple"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.AutoTargetHandler" x="1682" y="294">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="decoration_Package.Attack"
+            endpointName="attackHandler" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Attack"/>
+    </Class>
+    <Class name="decoration_Package.Display.buttonHandler" x="1707" y="460">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="decoration_Package.Display"/>
+    </Class>
+    <Class name="decoration_Package.FadeAway" x="1152" y="990">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gw" kind="Simple"/>
+    </Class>
+    <Class name="decoration_Package.MusicPlayer" x="1649" y="928">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="decoration_Package.Images" x="1871" y="366">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="bsGame_v6.BattleShipGame" x="1638" y="797">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="decoration_Package.DisplayListener" x="1524" y="93">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="decoration_Package.Fader" x="1134" y="858">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gw" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+    </Class>
+    <Class name="decoration_Package.WelcomeScreen.RadioButtonHandler"
+        x="190" y="387">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="decoration_Package.MusicPlayer"/>
+    </Class>
+    <Class name="decoration_Package.GameWindow" x="1294" y="828">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="decoration_Package.Attack"
+            endpointName="attackHandler" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Display"
+            endpointName="humanDisplay" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Display"
+            endpointName="playersDisplays" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Game"
+            endpointName="game" kind="Simple"/>
+        <Association destinationClassName="bsGame_v6.BattleShipGame"
+            endpointName="bsGame" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.Deployment"
+            endpointName="deploymentHandler" kind="Simple"/>
+        <Communication destinationClassName="bsGame_v6.BattleShipGame"/>
+        <Communication destinationClassName="decoration_Package.Display"/>
+        <Communication destinationClassName="decoration_Package.Attack"/>
+        <Communication destinationClassName="decoration_Package.Game"/>
+        <Communication destinationClassName="decoration_Package.Deployment"/>
+        <Communication destinationClassName="decoration_Package.MusicPlayer"/>
+    </Class>
+    <Class name="decoration_Package.Display" x="969" y="390">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="decoration_Package.DisplayListener"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Display"
+            endpointName="display" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gWindow" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.DisplayListener"
+            endpointName="displayListener" kind="Simple"/>
+        <Communication destinationClassName="battleField_Package.Cell"/>
+        <Communication destinationClassName="decoration_Package.Player"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+        <Communication destinationClassName="decoration_Package.DisplayListener"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+        <Communication destinationClassName="battleField_Package.Grid"/>
+    </Class>
+    <Class name="battleField_Package.Grid" x="246" y="122">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="battleField_Package.Cell"
+            endpointName="forShip" kind="Simple"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player" kind="Simple"/>
+        <Communication destinationClassName="battleField_Package.Cell"/>
+        <Communication destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.Attack" x="1469" y="394">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="decoration_Package.DisplayListener"/>
+        <Association
+            destinationClassName="decoration_Package.GameWindow"
+            endpointName="gWindow" kind="Simple"/>
+        <Communication destinationClassName="battleField_Package.Cell"/>
+        <Communication destinationClassName="decoration_Package.GameWindow"/>
+        <Communication destinationClassName="decoration_Package.Display"/>
+        <Communication destinationClassName="decoration_Package.Game"/>
+        <Communication destinationClassName="battleField_Package.Grid"/>
+        <Communication destinationClassName="decoration_Package.Deployment"/>
+    </Class>
+    <Class name="decoration_Package.SaveButtonHandler" x="204" y="498">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ship_Package.Destroyer" x="709" y="907">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.LabelHandlerr" x="240" y="748">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ship_Package.Submarine" x="943" y="911">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.WelcomeScreen" x="1915" y="800">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayer" kind="Simple"/>
+        <Association destinationClassName="bsGame_v6.BattleShipGame"
+            endpointName="bsGame" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.MusicPlayer"/>
+    </Class>
+    <Class name="ship_Package.Battleship" x="869" y="909">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.RotateShipHandler" x="1084" y="-10">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="decoration_Package.Deployment"
+            endpointName="deploymentHanlder" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Deployment"/>
+    </Class>
+    <Class name="ship_Package.PatrolBoat" x="1022" y="912">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ship_Package.Ship"/>
+    </Class>
+    <Class name="decoration_Package.Musics" x="2039" y="1005">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicShot" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayerGameVictory" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicC" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicB" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayerGameDefeated" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicA" kind="Simple"/>
+        <Association
+            destinationClassName="decoration_Package.MusicPlayer"
+            endpointName="musicPlayerOnDeployment" kind="Simple"/>
+    </Class>
+    <Class name="decoration_Package.StarterWindow" x="1792" y="634">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="bsGame_v6.BattleShipGame"
+            endpointName="bsGame" kind="Simple"/>
+        <Communication destinationClassName="bsGame_v6.BattleShipGame"/>
+    </Class>
+    <Class name="decoration_Package.Game" x="468" y="289">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="decoration_Package.Player"
+            endpointName="player1" kind="Simple"/>
+        <Communication destinationClassName="decoration_Package.Player"/>
+    </Class>
+</ClassDiagram>

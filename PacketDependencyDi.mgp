@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="battleField_Package" x="78" y="106">
+        <DependencyLink destination="decoration_Package"/>
+        <DependencyLink destination="ship_Package"/>
+    </Package>
+    <Package name="bsGame_v6" x="238" y="77">
+        <DependencyLink destination="decoration_Package"/>
+    </Package>
+    <Package name="decoration_Package" x="125" y="0">
+        <DependencyLink destination="bsGame_v6"/>
+        <DependencyLink destination="ship_Package"/>
+        <DependencyLink destination="battleField_Package"/>
+    </Package>
+    <Package name="ship_Package" x="2" y="50"/>
+</PackageAnalysis>
